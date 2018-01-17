@@ -17,15 +17,15 @@
 pkgbase="zfs-linux-zen-git"
 pkgname=("zfs-linux-zen-git" "zfs-linux-zen-git-headers")
 
-pkgver=2018.01.12.r3242.c10cdcb55.4.14.13.1
+pkgver=2018.01.16.r3243.d658b2caa.4.14.13.1
 pkgrel=1
 makedepends=("linux-zen-headers=4.14.13-1" "git" "spl-linux-zen-git-headers")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=c10cdcb55f81ea773486161b31bc91bb7b58b4c8")
+source=("git+https://github.com/zfsonlinux/zfs.git#commit=d658b2caa95726c13d99123874910cdedc7ce866")
 sha256sums=("SKIP")
 license=("CDDL")
-depends=("kmod" "spl-linux-zen-git" "zfs-utils-common-git=2018.01.12.r3242.c10cdcb55" "linux-zen=4.14.13-1")
+depends=("kmod" "spl-linux-zen-git" "zfs-utils-common-git=2018.01.16.r3243.d658b2caa" "linux-zen=4.14.13-1")
 
 build() {
     cd "${srcdir}/zfs"
