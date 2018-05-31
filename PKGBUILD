@@ -44,6 +44,7 @@ package_zfs-linux-zen-git() {
     provides=("zfs")
     groups=("archzfs-linux-zen-git")
     conflicts=('zfs-linux-zen' 'spl-linux-zen-git')
+    replaces=("spl-linux-zen-git")
     cd "${srcdir}/zfs"
     make DESTDIR="${pkgdir}" install
     cp -r "${pkgdir}"/{lib,usr}
