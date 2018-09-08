@@ -10,13 +10,7 @@ pkgbase = zfs-linux-zen-git
 	depends = zfs-utils-common-git=2018.09.07.r4720.gb8a90418f
 	depends = linux-zen=4.18.6.zen1-1
 	source = git+https://github.com/zfsonlinux/zfs.git#commit=b8a90418f3a9c23b89c5d2c729a4dd0fea644508
-	source = upstream-ac09630-Fix-zpl_mount-deadlock.patch
-	source = upstream-9f64c1e-Linux-4.18-compat-inode-timespec_timespec64.patch
-	source = upstream-9161ace-Linux-compat-4.18-check_disk_size_change.patch
 	sha256sums = SKIP
-	sha256sums = 1799f6f7b2a60a23b66106c9470414628398f6bfc10da3d0f41c548bba6130e8
-	sha256sums = 03ed45af40850c3a51a6fd14f36c1adc06501c688a67afb13db4fded6ec9db1d
-	sha256sums = afbde4a2507dff989404665dbbdfe18eecf5aba716a6513902affa0e4cb033fe
 
 pkgname = zfs-linux-zen-git
 	pkgdesc = Kernel modules for the Zettabyte File System.
