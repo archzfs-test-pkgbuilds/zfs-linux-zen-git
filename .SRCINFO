@@ -1,14 +1,14 @@
 pkgbase = zfs-linux-zen-git
-	pkgver = 2018.09.13.r4723.g5140a58f3_4.18.7.zen1.1
+	pkgver = 2018.09.13.r4723.g5140a58f3_4.18.8.zen1.1
 	pkgrel = 1
 	url = http://zfsonlinux.org/
 	arch = x86_64
 	license = CDDL
-	makedepends = linux-zen-headers=4.18.7.zen1-1
+	makedepends = linux-zen-headers=4.18.8.zen1-1
 	makedepends = git
 	depends = kmod
 	depends = zfs-utils-common-git=2018.09.13.r4723.g5140a58f3
-	depends = linux-zen=4.18.7.zen1-1
+	depends = linux-zen=4.18.8.zen1-1
 	source = git+https://github.com/zfsonlinux/zfs.git#commit=5140a58f3b2a25ce24ff9ae2b01277cd6c64f5ad
 	sha256sums = SKIP
 
@@ -17,22 +17,23 @@ pkgname = zfs-linux-zen-git
 	install = zfs.install
 	groups = archzfs-linux-zen-git
 	provides = zfs
-	conflicts = zfs-linux-zen
+	provides = spl
+	conflicts = zfs-dkms
+	conflicts = zfs-dkms-gitzfs-linux-zen
 	conflicts = spl-linux-zen-git
 	conflicts = spl-linux-zen
+	conflicts = spl-dkms
+	conflicts = spl-dkms-git
 	replaces = spl-linux-zen-git
 
 pkgname = zfs-linux-zen-git-headers
 	pkgdesc = Kernel headers for the Zettabyte File System.
-	conflicts = zfs-archiso-linux-headers
-	conflicts = zfs-archiso-linux-git-headers
-	conflicts = zfs-linux-hardened-headers
-	conflicts = zfs-linux-hardened-git-headers
-	conflicts = zfs-linux-lts-headers
-	conflicts = zfs-linux-lts-git-headers
-	conflicts = zfs-linux-headers
-	conflicts = zfs-linux-git-headers
-	conflicts = zfs-linux-vfio-headers
-	conflicts = zfs-linux-vfio-git-headers
-	conflicts = zfs-linux-zen-headers
+	provides = zfs-headers
+	provides = spl-headers
+	conflicts = zfs-headers
+	conflicts = zfs-dkms
+	conflicts = zfs-dkms-git
+	conflicts = spl-dkms
+	conflicts = spl-dkms-git
+	conflicts = spl-headers
 
