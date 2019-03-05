@@ -17,20 +17,18 @@
 #
 pkgbase="zfs-linux-zen-git"
 pkgname=("zfs-linux-zen-git" "zfs-linux-zen-git-headers")
-_commit='f545b6ae00ef77df710ddace328d13e8c5c265bf'
-_zfsver="2019.02.15.r4957.gf545b6ae0"
-_kernelver="4.20.10.zen1-1"
-_extramodules="4.20.10-zen1-1-zen"
+_commit='762f9ef3d9d897b5baf7c91d6e8a7bf371a9b02f'
+_zfsver="2019.03.02.r4984.g762f9ef3d"
+_kernelver="4.20.13.zen1-1"
+_extramodules="4.20.13-zen1-1-zen"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
 pkgrel=1
 makedepends=("linux-zen-headers=${_kernelver}" "git" "python")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
-        "upstream-4f981f6-additional-fixes-for-current_kernel_time-in-4.20.patch")
-sha256sums=("SKIP"
-            "6f27c3dae57c424e06aec31df6c1e1a821e547aa4e933f2f9b894b5e6762b52d")
+source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}")
+sha256sums=("SKIP")
 license=("CDDL")
 depends=("kmod" "zfs-utils-git=${_zfsver}" "linux-zen=${_kernelver}")
 
