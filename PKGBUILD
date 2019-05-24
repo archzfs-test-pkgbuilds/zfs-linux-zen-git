@@ -48,7 +48,7 @@ package_zfs-linux-zen-git() {
     install=zfs.install
     provides=("zfs" "spl")
     groups=("archzfs-linux-zen-git")
-    conflicts=("zfs-dkms" "zfs-dkms-git" "zfs-dkms-rc" "spl-dkms" "spl-dkms-git")
+    conflicts=("zfs-dkms" "zfs-dkms-git" "zfs-dkms-rc" "spl-dkms" "spl-dkms-git" 'zfs-linux-zen' 'spl-linux-zen-git' 'spl-linux-zen')
     replaces=("spl-linux-zen-git")
     cd "${srcdir}/zfs"
     make DESTDIR="${pkgdir}" install
