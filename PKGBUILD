@@ -17,16 +17,16 @@
 #
 pkgbase="zfs-linux-zen-git"
 pkgname=("zfs-linux-zen-git" "zfs-linux-zen-git-headers")
-_commit='75c09c5060b85a144cc794ae857520662dc8fd58'
-_zfsver="2019.05.23.r5134.g75c09c506"
-_kernelver="5.1.4.zen1-1"
-_extramodules="5.1.4-zen1-1-zen"
+_commit='ae38e00968a1920eb3c1051df888b24301e2f82b'
+_zfsver="2019.11.01.r5509.gae38e0096"
+_kernelver="5.3.8.1-1"
+_extramodules="5.3.8-zen1-1-zen"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
 pkgrel=1
-makedepends=("python" "linux-zen-headers=${_kernelver}" "git")
+makedepends=("linux-zen-headers=${_kernelver}" "git")
 arch=("x86_64")
-url="http://zfsonlinux.org/"
+url="https://zfsonlinux.org/"
 source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}")
 sha256sums=("SKIP")
 license=("CDDL")
@@ -37,7 +37,7 @@ build() {
     ./autogen.sh
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --libdir=/usr/lib \
                 --datadir=/usr/share --includedir=/usr/include --with-udevdir=/lib/udev \
-                --libexecdir=/usr/lib/zfs-${zfsver} --with-config=kernel \
+                --libexecdir=/usr/lib/zfs-${_zfsver} --with-config=kernel \
                 --with-linux=/usr/lib/modules/${_extramodules}/build \
                 --with-linux-obj=/usr/lib/modules/${_extramodules}/build
     make
